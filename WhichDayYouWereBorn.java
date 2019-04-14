@@ -1,7 +1,6 @@
 
 package calismalar;
 
-import java.util.Locale;
 
 public class WhichDayYouWereBorn 
 {
@@ -66,12 +65,12 @@ public class WhichDayYouWereBorn
         String[] days = { "friday","thursday","wednesday","tuesday",
         "monday","sunday","saturday"};
         total += getMonthDuration(month,year)-day;
-         System.out.println("1.etap "+total);
+        
         for(int i=month+1;i<=12;i++)
         {
             total += getMonthDuration(i,year);
         }
-        System.out.println("2.etap "+total);
+        
         for(int i=year+1;i<currentYear;i++)
         {
             if(i%4==0)
@@ -82,12 +81,12 @@ public class WhichDayYouWereBorn
                 total +=365;
             }
         }
-        System.out.println("3.etap "+total);
+       
         for(int i=1;i<currentMonth;i++)
         {
             total += getMonthDuration(i,currentYear);
         }
-        System.out.println("4.etap "+total);
+       
         total+=currentDay;
        System.out.println(days[total%7]);
     }
